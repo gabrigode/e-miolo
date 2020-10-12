@@ -7,6 +7,7 @@
             <label for="inputPassword" class="sr-only"> Senha </label>
             <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
             <button class="btn btn-lg btn-primary btn-block" type="submit"> Login </button>
+            <p> Cadastre-se com: </p>
             <social/>
         </form>
     </body>
@@ -17,7 +18,7 @@ import social from '@/components/social'
 export default {
     name: 'login',
     components:{
-      social
+      social,
     }
 }
 </script>
