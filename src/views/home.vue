@@ -11,9 +11,9 @@
 export default {
     data(){
         return{
-            email: (localStorage.getItem('email')),
-            name: (localStorage.getItem('name')),
-            picture: (localStorage.getItem('picture'))
+            email: (sessionStorage.getItem('email')),
+            name: (sessionStorage.getItem('name')),
+            picture: (sessionStorage.getItem('picture'))
         }
     }
 }
