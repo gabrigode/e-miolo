@@ -75,8 +75,8 @@ export default {
             console.log (googleUser.getBasicProfile().Ad);
             console.log (googleUser.getBasicProfile().Wt);
             console.log (googleUser.getBasicProfile().ZJ);
-            this.email = googleUser.getBasicProfile().Ad;
-            this.name = googleUser.getBasicProfile().Wt;
+            this.email = googleUser.getBasicProfile().Wt;
+            this.name = googleUser.getBasicProfile().Ad;
             this.picture = googleUser.getBasicProfile().ZJ;
             sessionStorage.setItem('email', this.email);
             sessionStorage.setItem('name', this.name);
