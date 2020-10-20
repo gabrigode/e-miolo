@@ -56,8 +56,8 @@ export default {
                     sessionStorage.setItem('email', this.email);
                     sessionStorage.setItem('name', this.name);
                     sessionStorage.setItem('picture', this.picture);
+                    router.push('/home')
                 })
-                router.push('/home')
         },
         sdkLoaded(payload){
             this.isConnected = payload.isConnected
@@ -67,6 +67,7 @@ export default {
         onLogin(){
             this.isConnected = true
             this.getUserData()
+            router.push('/home')
         },
         onLogout(){
             this.isConnected = false;
