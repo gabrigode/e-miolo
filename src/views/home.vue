@@ -41,30 +41,29 @@ export default {
     },
     methods:{
         swNome(){
+            var vm = this;
             let id = Math.floor(Math.random() * (83 - 1) + 1)
             fetch(`https://swapi.dev/api/people/${id}/`)
             .then(function(response){
                 return response.json();
             })
             .then(function(result){
-                sessionStorage.setItem('swnome', result.name)
+                vm.swnome = result.name
             })
             this.swnome = sessionStorage.getItem('swnome')
         },
         swFilme(){
             let id = Math.floor(Math.random() * (6 - 1) + 1)
+            var vm = this;
             fetch(`https://swapi.dev/api/films/${id}/`)
             .then(function(response){
                 return response.json();
             })
             .then(function(result){
-                sessionStorage.setItem('swfilme', result.title)
-                sessionStorage.setItem('swfilme_director', result.director)
-                sessionStorage.setItem('swfilme_release_date', result.release_date)
+                vm.swfilme = result.title
+                vm.swfilme_director = result.director
+                vm.swfilme_release_date = result.release_date
             })
-            this.swfilme = sessionStorage.getItem('swfilme')
-            this.swfilme_director = sessionStorage.getItem('swfilme_director')
-            this.swfilme_release_date = sessionStorage.getItem('swfilme_release_date')
         }
     }
 }

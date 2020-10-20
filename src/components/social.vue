@@ -3,7 +3,6 @@
         <facebook-login class="button"
             appId="349158253021891"
             @login="getUserData"
-            @logout="onLogout"
             @get-initial-status="getUserData"
             @sdk-loaded="sdkLoaded">
         </facebook-login>
@@ -67,10 +66,6 @@ export default {
         onLogin(){
             this.isConnected = true
             this.getUserData()
-            router.push('/home')
-        },
-        onLogout(){
-            this.isConnected = false;
         },
         onSuccess(googleUser){
             console.log (googleUser.getBasicProfile().Ad);
