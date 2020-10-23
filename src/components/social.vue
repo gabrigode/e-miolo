@@ -1,7 +1,7 @@
 <template>
     <div>
         <facebook-login class="button"
-            appId="349158253021891"
+            appId="389417232216645"
             @login="getUserData"
             @get-initial-status="getUserData"
             @sdk-loaded="sdkLoaded">
